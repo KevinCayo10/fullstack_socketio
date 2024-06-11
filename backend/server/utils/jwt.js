@@ -4,6 +4,7 @@ const getToken = (username) => {
   const token = jwt.sign({ username }, secret, {
     expiresIn: "1h",
   });
+  return token;
 };
 
 const validateToken = (token) => {
